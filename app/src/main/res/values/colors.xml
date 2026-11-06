@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="icon_bg">#F7F2E7</color>
+    <color name="brand">#DF5129</color>
+    <color name="brand_dark">#BC3F1E</color>
+    <color name="cream">#F7F2E7</color>
+    <color name="ink">#173F36</color>
+    <color name="muted">#567065</color>
+    <color name="sage">#E9E8D5</color>
+    <color name="paper">#FFFCF4</color>
+    <color name="blue">#2C58AB</color>
+    <color name="line">#D9D2BC</color>
+    <!-- 关注头像新圆点的 2dp 描边：比卡片纸色深一档，保证可见。 -->
+    <color name="new_dot_halo">#F3EADB</color>
+    <!-- 保存弹层 v2（Figma 21:498）新增：选中行浅橘底、取消按钮纸色。 -->
+    <color name="save_row_selected">#FBEFE3</color>
+    <color name="save_cancel_bg">#F3EADB</color>
+</resources>

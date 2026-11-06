@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 首页头部：eyebrow + 标题（右侧齿轮进设置）+ 平台页签 + 二级分段 + 搜索条 + 入口卡 + 状态行。
+     关注模式下只保留分段和一行说明（画板 03：没有搜索条 / 入口卡 / 条数状态行）。 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="22dp"
+    android:paddingTop="28dp"
+    android:paddingEnd="22dp">
+
+    <TextView
+        style="@style/Eyebrow"
+        android:text="A WINDOW FOR THE GOOD STUFF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/app_title"
+            style="@style/PageTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:text="亮点，今天也刚好。" />
+
+        <!-- 设置入口：24dp 视觉 / 48dp 触区，右边距 22dp 由父容器给。 -->
+        <FrameLayout
+            android:id="@+id/settingsGear"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:contentDescription="设置"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:contentDescription="设置"
+                android:src="@drawable/ic_gear" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tab_xhs"
+            style="@style/Chip"
+            android:text="小红书" />
+
+        <TextView
+            android:id="@+id/tab_bili"
+            style="@style/Chip"
+            android:text="B站" />
+    </LinearLayout>
+
+    <!-- B站专属的二级切换：推荐 / 关注；小红书页签下整行隐藏。 -->
+    <LinearLayout
+        android:id="@+id/biliMode"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_segment"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/modeRecommend"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_segment_active"
+            android:gravity="center"
+            android:text="推荐"
+            android:textColor="@color/brand"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/modeFollow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="关注"
+            android:textColor="@color/muted"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/bg_search_bar"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:text="⌕  搜索小红书内容"
+        android:textColor="@color/ink"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:id="@+id/pullBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_sage"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/refreshSpin"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="14dp"
+            android:indeterminateTint="@color/brand"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/pullState"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:textColor="@color/ink"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <include layout="@layout/view_bili_entry" />
+
+    <!-- 关注模式的一行说明（画板 03）。 -->
+    <TextView
+        android:id="@+id/followHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="4dp"
+        android:text="按视频判断 · 同一 UP 的投稿逐条出现"
+        android:textColor="@color/muted"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/statusRow"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="正在打开今日的窗…"
+            android:textColor="@color/muted"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/pullHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="↓ 下拉更新"
+            android:textColor="@color/muted"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

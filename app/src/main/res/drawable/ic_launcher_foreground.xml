@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Codex B 方案「封面亮标」：108dp 自适应图标前景，背景由 icon_bg 提供。 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 后方封面 -->
+    <path
+        android:fillColor="#E9E8D5"
+        android:pathData="M44 29H71A8 8 0 0 1 79 37V58A8 8 0 0 1 71 66H44A8 8 0 0 1 36 58V37A8 8 0 0 1 44 29Z" />
+
+    <!-- 墨绿封面框 -->
+    <path
+        android:fillColor="#173F36"
+        android:pathData="M37 38H69A8 8 0 0 1 77 46V69A8 8 0 0 1 69 77H37A8 8 0 0 1 29 69V46A8 8 0 0 1 37 38Z" />
+
+    <!-- 奶油内页 -->
+    <path
+        android:fillColor="#F7F2E7"
+        android:pathData="M39 44H67A4 4 0 0 1 71 48V67A4 4 0 0 1 67 71H39A4 4 0 0 1 35 67V48A4 4 0 0 1 39 44Z" />
+
+    <!-- 内页山形 -->
+    <path
+        android:fillColor="#E9E8D5"
+        android:pathData="M35 62L48 52L59 61L71 54V67A4 4 0 0 1 67 71H39A4 4 0 0 1 35 67Z" />
+
+    <!-- 琥珀底圆 -->
+    <path
+        android:fillColor="#E8A33D"
+        android:pathData="M81 39A12 12 0 1 1 57 39A12 12 0 1 1 81 39Z" />
+
+    <!-- 橘色亮点 -->
+    <path
+        android:fillColor="#DF5129"
+        android:pathData="M75 39A6 6 0 1 1 63 39A6 6 0 1 1 75 39Z" />
+</vector>

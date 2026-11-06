@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 二级切换选中项：纸色胶囊，压在浅豆绿底槽上。 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/paper" />
+    <corners android:radius="17dp" />
+</shape>

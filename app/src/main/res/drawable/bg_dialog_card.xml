@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 确认弹层底板：纸色 + 20dp 圆角，沿用 v2 弹层语言。 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/paper" />
+    <corners android:radius="20dp" />
+</shape>

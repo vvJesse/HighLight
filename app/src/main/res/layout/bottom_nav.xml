@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 底部导航 v2：首页 / 搜索 / 收藏 三项等分，高 64dp；设置不再占 tab（首页标题右侧齿轮进入）。 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@color/cream"
+    android:orientation="horizontal"
+    android:paddingStart="8dp"
+    android:paddingTop="4dp"
+    android:paddingEnd="8dp"
+    android:paddingBottom="4dp">
+
+    <TextView
+        android:id="@+id/navHome"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="3dp"
+        android:layout_weight="1"
+        android:contentDescription="首页"
+        android:drawablePadding="4dp"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:text="首页"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/navSearch"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="3dp"
+        android:layout_weight="1"
+        android:contentDescription="搜索"
+        android:drawablePadding="4dp"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:text="搜索"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/navCollection"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="3dp"
+        android:layout_weight="1"
+        android:contentDescription="收藏"
+        android:drawablePadding="4dp"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:text="收藏"
+        android:textSize="12sp" />
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 首次配置引导的输入框：奶油纸底 + 12dp 圆角（设计稿 05 卡片内输入区）。 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/cream" />
+    <corners android:radius="12dp" />
+</shape>

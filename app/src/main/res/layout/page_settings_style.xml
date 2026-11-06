@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 设置 v2 · 样式（SV2-04）：发亮开关 + 强度滑杆；灰罩（原生 App 封面）作为同结构分组保留。 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/SettingsGroupTitle"
+        android:layout_marginTop="4dp"
+        android:text="卡片显示" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/SettingsRowTitle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="发亮卡片" />
+
+        <Switch
+            android:id="@+id/glowEnabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:thumb="@drawable/switch_thumb_bg"
+            android:track="@drawable/switch_track_bg"
+            android:contentDescription="发亮卡片开关" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/SettingsRowTitle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="发亮强度" />
+
+        <TextView
+            android:id="@+id/glowLabel"
+            style="@style/SettingsRowValue"
+            android:text="60%" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <SeekBar
+        android:id="@+id/glowSeek"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:progress="60"
+        android:progressBackgroundTint="@color/sage"
+        android:progressTint="@color/brand"
+        android:thumbTint="@color/brand" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/SettingsRowValue"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="0" />
+
+        <TextView
+            style="@style/SettingsRowValue"
+            android:text="100" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/SettingsHint"
+        android:layout_marginTop="24dp"
+        android:text="仅影响发亮显示。\n被过滤的视频不出现在列表中。" />
+
+    <TextView
+        style="@style/SettingsGroupTitle"
+        android:layout_marginTop="32dp"
+        android:text="灰罩（原生 App 封面）" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/SettingsRowTitle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="灰罩" />
+
+        <Switch
+            android:id="@+id/dimEnabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:thumb="@drawable/switch_thumb_bg"
+            android:track="@drawable/switch_track_bg"
+            android:contentDescription="灰罩开关" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/SettingsRowTitle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="灰罩不透明度" />
+
+        <TextView
+            android:id="@+id/dimLabel"
+            style="@style/SettingsRowValue"
+            android:text="55%" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <SeekBar
+        android:id="@+id/dimSeek"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:max="70"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:progress="35"
+        android:progressBackgroundTint="@color/sage"
+        android:progressTint="@color/brand"
+        android:thumbTint="@color/brand" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/SettingsRowValue"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="20%" />
+
+        <TextView
+            style="@style/SettingsRowValue"
+            android:text="90%" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/SettingsHint"
+        android:layout_marginTop="24dp"
+        android:text="灰罩只覆盖原生 App 的封面；列表里判为不想看的条目不显示，也不加灰罩。" />
+</LinearLayout>

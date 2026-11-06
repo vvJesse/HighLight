@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 设置页「运行状态」组（设计稿 08 下半部分）：只读展示 + 系统设置入口。 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView style="@style/SectionTitle" android:text="运行状态" />
+
+    <TextView
+        style="@style/Body"
+        android:layout_marginTop="4dp"
+        android:text="只反映本机现在的状态；系统里改了权限，回到这一页就会更新。" />
+
+    <!-- 无障碍服务 -->
+    <LinearLayout
+        android:id="@+id/a11yRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_card16"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:minHeight="48dp"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="8dp">
+
+        <View
+            android:id="@+id/a11yDot"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/bg_dot_muted" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:text="无障碍服务"
+            android:textColor="@color/ink"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/a11yState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未开启"
+            android:textColor="@color/brand"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/a11yAction"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="6dp"
+            android:gravity="center"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:text="去系统设置"
+            android:textColor="@color/brand"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- 当前亮点会话 -->
+    <LinearLayout
+        android:id="@+id/sessionRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_card16"
+        android:gravity="center_vertical"
+        android:minHeight="48dp"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp">
+
+        <View
+            android:id="@+id/sessionDot"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/bg_dot_muted" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:text="当前亮点会话"
+            android:textColor="@color/ink"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/sessionState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未运行"
+            android:textColor="@color/muted"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- 故障提示：有才显示故障内容，否则就是一行「暂无异常」 -->
+    <TextView
+        android:id="@+id/statusFault"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_card16"
+        android:lineSpacingExtra="4dp"
+        android:paddingStart="16dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="14dp"
+        android:text="暂无异常"
+        android:textColor="@color/muted"
+        android:textSize="13sp" />
+
+    <TextView
+        style="@style/Body"
+        android:layout_marginTop="10dp"
+        android:text="发亮开关只影响显示；被过滤的视频不在列表中显示。" />
+</LinearLayout>

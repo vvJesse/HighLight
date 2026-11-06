@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">亮点</string>
+    <string name="a11y_description">在 B站 或小红书的推荐页封面上标出发亮与灰罩。只有从亮点入口打开、且检查通过时才工作；离开目标 App 就自动停止。</string>
+</resources>

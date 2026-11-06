@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 取消按钮：纸色底 + 圆角 22dp。 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/save_cancel_bg" />
+    <corners android:radius="22dp" />
+</shape>

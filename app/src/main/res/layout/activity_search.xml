@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/cream">
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+            <TextView style="@style/Eyebrow" android:text="FOLLOW YOUR CURIOSITY"/>
+            <TextView style="@style/PageTitle" android:text="带着问题，去看看。"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <TextView android:id="@+id/srcChip" style="@style/Chip" android:text="小红书"/>
+                <TextView android:id="@+id/searchBili" style="@style/Chip" android:text="B站"/>
+            </LinearLayout>
+            <TextView android:id="@+id/searchEntry" style="@style/PaperInput" android:layout_marginTop="24dp" android:gravity="center_vertical" android:minHeight="54dp" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="⌕  去小红书搜点什么…"/>
+            <TextView style="@style/Body" android:text="点一下搜索框，直接进入对应平台的搜索页"/>
+            <TextView style="@style/Body" android:layout_marginTop="28dp" android:text="按上方平台切换去哪边找。 搜索结果在平台里打开，屏幕边会出现「返回亮点」气泡。"/>
+            <com.feedreform.highlight.WindowGardenView android:layout_width="match_parent" android:layout_height="126dp" android:layout_marginTop="54dp" android:contentDescription="窗边小景插画：让生活再亮一点"/>
+            <TextView style="@style/SectionTitle" android:text="想找什么，就从这里开始。"/>
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/bottom_nav"/>
+</LinearLayout>

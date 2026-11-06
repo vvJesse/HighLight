@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- B站推荐无凭据（或凭据失效）时的引导态：不展示任何卡片，只给一个去设置填凭据的入口。 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center_horizontal" android:paddingStart="24dp" android:paddingTop="36dp" android:paddingEnd="24dp" android:paddingBottom="36dp">
+    <TextView android:id="@+id/cookieGuideTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/noto_serif_sc" android:gravity="center" android:text="先填入 B站 凭据，才会显示你自己的推荐" android:textColor="@color/ink" android:textSize="18sp" android:textStyle="bold"/>
+    <TextView android:id="@+id/cookieGuideBody" style="@style/Body" android:gravity="center" android:text="推荐与关注都要求本机 B站 凭据；匿名接口只用于验证网络连通性，不作为产品数据源。"/>
+    <Button android:id="@+id/cookieGuideButton" style="@style/PrimaryButton" android:layout_marginTop="18dp" android:text="去设置填凭据"/>
+</LinearLayout>

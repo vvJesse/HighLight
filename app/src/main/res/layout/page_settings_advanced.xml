@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 设置 v2 · 高级（SV2-05）：调试 / 缓存 / 版本。
+     与设计稿的偏差：按用户要求去掉「高级 Prompt」输入与保存（它不进缓存键，改了旧结论不失效）。 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/debugGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        style="@style/SettingsGroupTitle"
+        android:layout_marginTop="32dp"
+        android:text="调试" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/SettingsRowTitle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="脱敏调试信息" />
+
+        <Switch
+            android:id="@+id/sanitizedToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:thumb="@drawable/switch_thumb_bg"
+            android:track="@drawable/switch_track_bg"
+            android:contentDescription="脱敏调试信息开关" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/SettingsRowTitle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="最近一次判断" />
+
+        <TextView
+            android:id="@+id/lastJudgeClass"
+            style="@style/SettingsRowValue"
+            android:text="暂无记录" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lastJudgeSummary"
+        style="@style/SettingsHint"
+        android:text="暂无记录" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/debugImport"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:text="导入测试凭据（bili-cookie.txt）"
+        android:textColor="@color/muted"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/SettingsGroupTitle"
+        android:layout_marginTop="32dp"
+        android:text="缓存" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/SettingsRowTitle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="本机缓存" />
+
+        <TextView
+            android:id="@+id/cacheState"
+            style="@style/SettingsRowValue"
+            android:text="0 条 · 0 MB" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/clearCache"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:text="清除缓存"
+        android:textColor="@color/brand"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/version"
+        style="@style/SettingsHint"
+        android:layout_marginTop="28dp"
+        android:text="亮点 · 0.6" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+</LinearLayout>

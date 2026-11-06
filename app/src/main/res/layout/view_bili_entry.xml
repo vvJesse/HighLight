@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- B站入口卡（画板 01，V-04）：高约 126dp；圆点 + 蓝条直接落在鼠尾草底上、竖排在右下角，
+     不再套白色胶囊，也不单独占一行。 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/biliEntry"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="14dp"
+    android:background="@drawable/bg_entry_card"
+    android:clickable="true"
+    android:contentDescription="B站 · 亮点，打开检查面板"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:minHeight="126dp"
+    android:orientation="horizontal"
+    android:paddingStart="18dp"
+    android:paddingTop="16dp"
+    android:paddingEnd="18dp"
+    android:paddingBottom="16dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_serif_sc"
+            android:text="B站 · 亮点"
+            android:textColor="@color/ink"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="3dp"
+            android:text="打开 B站，封面直接标出&#10;特别关注和不想看"
+            android:textColor="@color/muted"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- 设计稿的占位插画：橘色圆点 + 蓝色短条，竖排贴右下角。 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <!-- V-r2-06：「就绪」白胶囊在右侧列、插画上方，靠卡右缘（root paddingEnd=18dp）。 -->
+        <!-- 同一行最右是「!」说明按钮：40dp 触区 / 24dp 视觉，clickable 子 View 消费点击。 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="62dp"
+                android:layout_height="26dp"
+                android:background="@drawable/bg_badge_paper"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
+
+                <View
+                    android:id="@+id/biliEntryDot"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_dot_brand" />
+
+                <TextView
+                    android:id="@+id/biliEntryState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="就绪"
+                    android:textColor="@color/ink"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/entryInfo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="6dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:contentDescription="亮点是什么"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:background="@drawable/bg_info_badge"
+                    android:gravity="center"
+                    android:importantForAccessibility="no"
+                    android:includeFontPadding="false"
+                    android:text="!"
+                    android:textColor="@color/ink"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_dot_brand" />
+
+        <View
+            android:layout_width="46dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_bar_blue" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 设置页开关轨道：开 = 品牌橘实底，关 = 鼠尾草（设计稿 08/风格页）。 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/brand" />
+            <corners android:radius="16dp" />
+            <size android:width="52dp" android:height="32dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/sage" />
+            <corners android:radius="16dp" />
+            <size android:width="52dp" android:height="32dp" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 设置页次要动作：鼠尾草底、墨绿字、16dp 圆角。 -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="#1A173F36">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/sage" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+</ripple>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 管理页「干货」标签：浅豆绿小胶囊。 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/sage" />
+    <corners android:radius="4dp" />
+</shape>

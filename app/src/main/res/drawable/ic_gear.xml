@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 设置齿轮：24dp 视觉，48dp 触区由布局提供。 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="24dp" android:height="24dp" android:viewportWidth="24" android:viewportHeight="24">
+    <path android:pathData="M11.06,2.45 L12.94,2.45 L14.15,4.92 L15.49,5.47 L18.09,4.58 L19.42,5.91 L18.53,8.51 L19.08,9.85 L21.55,11.06 L21.55,12.94 L19.08,14.15 L18.53,15.49 L19.42,18.09 L18.09,19.42 L15.49,18.53 L14.15,19.08 L12.94,21.55 L11.06,21.55 L9.85,19.08 L8.51,18.53 L5.91,19.42 L4.58,18.09 L5.47,15.49 L4.92,14.15 L2.45,12.94 L2.45,11.06 L4.92,9.85 L5.47,8.51 L4.58,5.91 L5.91,4.58 L8.51,5.47 L9.85,4.92 Z M12.00,8.80 A3.20,3.20 0 1 0 12.00,15.20 A3.20,3.20 0 1 0 12.00,8.80 Z" android:fillColor="@color/ink"/>
+</vector>

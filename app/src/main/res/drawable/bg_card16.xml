@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 小红书入口主卡片：纸白底 + 16dp 圆角。 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/paper" />
+    <corners android:radius="16dp" />
+</shape>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- targetSdk 36 的包可见性过滤：不声明就查不到小红书/B站的 scheme，无法在跳转前判断能否直达搜索页。 -->
+    <queries>
+        <package android:name="com.xingin.xhs" />
+        <package android:name="tv.danmaku.bili" />
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="xhsdiscover" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="bilibili" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".SettingsActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false"
+            android:label="设置" />
+
+        <activity
+            android:name=".CollectionActivity"
+            android:exported="false"
+            android:label="收藏"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".EntryCheckActivity"
+            android:exported="false"
+            android:label="打开亮点"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".OnboardingActivity"
+            android:exported="false"
+            android:label="首次配置"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".SearchActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme" />
+
+        <service
+            android:name=".HighlightService"
+            android:exported="true"
+            android:label="亮点 · 封面标记"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/highlight_accessibility" />
+        </service>
+
+        <service
+            android:name=".ReturnBubbleService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="floating return-to-app button" />
+        </service>
+
+        <!--
+          仅调试用，发行包不启用：广播处理在 HighlightService.onServiceConnected() 里以
+          BuildConfig.DEBUG 控制动态注册（exported，不设 permission）。这里只登记 action 列表，
+          release 由 manifestPlaceholders testControlEnabled=false 关掉，且 onReceive 直接返回。
+        -->
+        <receiver
+            android:name=".TestControlReceiver"
+            android:exported="true"
+            android:enabled="${testControlEnabled}">
+            <intent-filter>
+                <action android:name="com.feedreform.highlight.TEST_CLICK_TEXT" />
+                <action android:name="com.feedreform.highlight.TEST_CLICK_XY" />
+                <action android:name="com.feedreform.highlight.TEST_SWIPE" />
+                <action android:name="com.feedreform.highlight.TEST_BACK" />
+                <action android:name="com.feedreform.highlight.TEST_START_SESSION" />
+                <action android:name="com.feedreform.highlight.TEST_SET_CLIPBOARD" />
+                <action android:name="com.feedreform.highlight.TEST_SET_TEXT" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

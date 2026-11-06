@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 关注流缩略图底：浅豆绿圆角，图片未到/为空时兜底。 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/sage" />
+    <corners android:radius="8dp" />
+</shape>

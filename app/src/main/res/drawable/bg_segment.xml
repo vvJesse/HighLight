@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 「推荐 / 关注」二级切换的底槽：浅豆绿胶囊。 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/sage" />
+    <corners android:radius="20dp" />
+</shape>

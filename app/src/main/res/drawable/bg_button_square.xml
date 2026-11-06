@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 整宽主按钮：品牌橘实底 + 16dp 圆角。 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/brand" />
+    <corners android:radius="16dp" />
+</shape>
