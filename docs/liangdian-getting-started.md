@@ -28,6 +28,7 @@
 4. 弹出一串 **`sk-` 开头**的字符：**先复制，再关窗口**。关了就看不到了。
 5. 先存到备忘录，或发给微信「文件传输助手」（**别发群里**）。
 
+![DeepSeek API keys 页面](assets/liangdian-guide/deepseek-api-key.png)
 
 ## 3. 取 B站 Cookie
 
@@ -37,6 +38,7 @@
 4. 右键 Cookie →「**Copy value**」（不是 Copy）。
 5. 发到手机的文件传输助手；**Cookie 等于登录状态，别发给别人；用完删掉这条消息**。
 
+![在 Chrome 里复制 B站 Cookie](assets/liangdian-guide/bilibili-cookie.png)
 
 > Cookie 过期、只复制 SESSDATA、找不到 `web?` 请求：见 [常见问题](liangdian-faq.md)。
 
